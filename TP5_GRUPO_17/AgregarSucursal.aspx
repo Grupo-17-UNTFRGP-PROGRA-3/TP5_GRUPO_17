@@ -40,6 +40,18 @@
             height: 26px;
         }
         
+        .auto-style10 {
+            height: 13px;
+        }
+        .auto-style11 {
+            width: 174px;
+            height: 13px;
+        }
+        .auto-style12 {
+            width: 178px;
+            height: 13px;
+        }
+        
     </style>
 </head>
 <body>
@@ -86,19 +98,24 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
-                <td class="auto-style2">&nbsp;</td>
-                <td class="auto-style7">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style10"></td>
+                <td class="auto-style11">Descripción:</td>
+                <td class="auto-style12">
+                    <asp:TextBox ID="txtDescripcion" runat="server" Width="230px" Height="37px"></asp:TextBox>
+                </td>
+                <td class="auto-style10"></td>
+                <td class="auto-style10"></td>
+                <td class="auto-style10"></td>
+                <td class="auto-style10"></td>
+                <td class="auto-style10"></td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
-                <td class="auto-style2">&nbsp;</td>
-                <td class="auto-style7">&nbsp;</td>
+                <td class="auto-style2">Provincia:</td>
+                <td class="auto-style7">
+                    <asp:DropDownList ID="ddlProvincia" runat="server">
+                    </asp:DropDownList>
+                </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
