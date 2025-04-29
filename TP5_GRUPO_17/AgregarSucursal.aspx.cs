@@ -29,5 +29,25 @@ namespace TP5_GRUPO_17
 				ddlProvincia.DataBind();
 			}
 		}
-	}
+        protected void btnAceptar_Click(object sender, EventArgs e)
+        {
+			try
+			{	
+                string consultaSQL = "INSERT INTO Sucursal (NombreSucursal, DescripcionSucursal, Id_ProvinciaSucursal, DireccionSucursal) VALUES('" +
+									 txtNombreSucursal.Text + "', '" +
+									 txtDescripcion.Text + "', '" +
+									 ddlProvincia.SelectedValue + "', '" +
+									 txtDireccion.Text + "')";
+				
+				AccesoDatos accesoDatos = new AccesoDatos();
+				accesoDatos.ejecutarConsulta(consultaSQL);
+
+                lblMensajeExito.Text = "La sucursal se ha agregado con exito";
+            }
+            catch
+			{
+				lblMensajeExito.Text = "Error al agregar la sucursal";
+            }
+        }
+    }
 }

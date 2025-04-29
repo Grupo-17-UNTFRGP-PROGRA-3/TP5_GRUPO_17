@@ -146,7 +146,7 @@
                 <td class="auto-style11"></td>
                 <td class="auto-style6"></td>
                 <td class="auto-style9">
-                    <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" ValidationGroup="G1" />
+                    <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" ValidationGroup="G1" OnClick="btnAceptar_Click" />
                 </td>
                 <td class="auto-style14"></td>
                 <td class="auto-style5"></td>

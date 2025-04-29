@@ -10,7 +10,6 @@ namespace TP5_GRUPO_17
     public class Negocio
     {
         AccesoDatos conexion = new AccesoDatos();
-
         public DataTable ObtenerProvincias()
         {
             string consultaSQL = "SELECT * FROM Provincia";
