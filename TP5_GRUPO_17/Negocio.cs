@@ -37,5 +37,15 @@ namespace TP5_GRUPO_17
 
             return conexion.ObtenerTablas(consultaSQL, nombreTabla);
         }
+        public int AgregarSucursal(string nombre, string descripcion, string idProvincia, string direccion)
+        {
+            string consultaSQL = "INSERT INTO Sucursal (NombreSucursal, DescripcionSucursal, Id_ProvinciaSucursal, DireccionSucursal) VALUES('" +
+                                     nombre + "', '" +
+                                     descripcion + "', '" +
+                                     idProvincia + "', '" +
+                                     direccion + "')";
+
+            return conexion.EjecutarConsulta(consultaSQL);
+        }
     }
 }

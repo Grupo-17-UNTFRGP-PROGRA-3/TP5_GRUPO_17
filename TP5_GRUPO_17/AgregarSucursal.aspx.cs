@@ -34,15 +34,9 @@ namespace TP5_GRUPO_17
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
 			try
-			{	
-                string consultaSQL = "INSERT INTO Sucursal (NombreSucursal, DescripcionSucursal, Id_ProvinciaSucursal, DireccionSucursal) VALUES('" +
-									 txtNombreSucursal.Text + "', '" +
-									 txtDescripcion.Text + "', '" +
-									 ddlProvincia.SelectedValue + "', '" +
-									 txtDireccion.Text + "')";
-				
-				AccesoDatos accesoDatos = new AccesoDatos();
-				accesoDatos.ejecutarConsulta(consultaSQL);
+			{
+				Negocio negocio = new Negocio();
+				negocio.AgregarSucursal(txtNombreSucursal.Text, txtDescripcion.Text, ddlProvincia.SelectedValue, txtDireccion.Text);
 
                 lblMensajeExito.Text = "La sucursal se ha agregado con exito";
             }

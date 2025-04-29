@@ -26,7 +26,7 @@ namespace TP5_GRUPO_17
 
             return dataSet.Tables[nombreTabla];
         }
-        public int ejecutarConsulta(string consultaSQL)
+        public int EjecutarConsulta(string consultaSQL)
 		{
 			conexion.Open();
 
