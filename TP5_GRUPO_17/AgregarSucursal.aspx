@@ -98,7 +98,7 @@
                     <asp:TextBox ID="txtDescripcion" runat="server" Width="230px" Height="48px" ValidationGroup="G1"></asp:TextBox>
                 </td>
                 <td class="auto-style14">
-                    <asp:RequiredFieldValidator ID="rfvDescripcion" runat="server" ControlToValidate="txtDescripcion" Display="Dynamic" ErrorMessage="Debe ingresar una descripcion" ValidationGroup="G1"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvDescripcion" runat="server" ControlToValidate="txtDescripcion" Display="Dynamic" ErrorMessage="Debe ingresar una descripción" ValidationGroup="G1"></asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style5"></td>
                 <td class="auto-style5"></td>
@@ -112,7 +112,9 @@
                     <asp:DropDownList ID="ddlProvincia" runat="server">
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style13">&nbsp;</td>
+                <td class="auto-style13">
+                    <asp:RequiredFieldValidator ID="rfvProvincia" runat="server" ControlToValidate="ddlProvincia" Display="Dynamic" ErrorMessage="Debe seleccionar una provincia" ValidationGroup="G1"></asp:RequiredFieldValidator>
+                </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -125,7 +127,7 @@
                     <asp:TextBox ID="txtDireccion" runat="server" Width="230px" ValidationGroup="G1"></asp:TextBox>
                 </td>
                 <td class="auto-style15">
-                    <asp:RequiredFieldValidator ID="rfvDireccion" runat="server" ControlToValidate="txtDireccion" Display="Dynamic" ErrorMessage="Debe ingresar una direccion" ValidationGroup="G1"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvDireccion" runat="server" ControlToValidate="txtDireccion" Display="Dynamic" ErrorMessage="Debe ingresar una dirección" ValidationGroup="G1"></asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style3"></td>
                 <td class="auto-style3"></td>

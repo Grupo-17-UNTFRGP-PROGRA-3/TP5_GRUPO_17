@@ -27,6 +27,8 @@ namespace TP5_GRUPO_17
 				ddlProvincia.DataValueField = "Id_Provincia";
 
 				ddlProvincia.DataBind();
+
+				ddlProvincia.Items.Insert(0, new ListItem("--Seleccionar--", ""));
 			}
 		}
         protected void btnAceptar_Click(object sender, EventArgs e)
@@ -48,6 +50,16 @@ namespace TP5_GRUPO_17
 			{
 				lblMensajeExito.Text = "Error al agregar la sucursal";
             }
+
+			LimpiarCampos();
+        }
+
+		private void LimpiarCampos()
+		{
+			txtNombreSucursal.Text = string.Empty;
+			txtDescripcion.Text = string.Empty;
+			txtDireccion.Text = string.Empty;
+			ddlProvincia.SelectedIndex = 0;
         }
     }
 }
