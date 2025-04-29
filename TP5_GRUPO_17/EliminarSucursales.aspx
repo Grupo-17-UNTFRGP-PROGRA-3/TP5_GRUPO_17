@@ -17,6 +17,14 @@
     <h1 style="margin-left: 80px">Trabajo Práctico N°5 - Grupo 17&nbsp;&nbsp;&nbsp; </h1>
     </nav>
         </div>
+        <div>
+            <h2>Eliminar sucursal</h2>
+        </div>
+        <div>
+            Ingresar ID  sucursal:
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtSucursalAEliminar" runat="server" Width="240px"></asp:TextBox>
+        </div>
     </form>
 </body>
 </html>
