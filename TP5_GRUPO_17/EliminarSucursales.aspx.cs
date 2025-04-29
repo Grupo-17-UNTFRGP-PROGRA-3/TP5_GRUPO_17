@@ -16,7 +16,16 @@ namespace TP5_GRUPO_17
 
         protected void btnEliminarSucursal_Click(object sender, EventArgs e)
         {
-			lblMensaje.Text = "*mensaje*";
+            Negocio negocio = new Negocio();
+
+            if (negocio.EliminarSucursal(txtSucursalAEliminar.Text) == 1)
+            {
+                lblMensaje.Text = "La sucursal se ha eliminado con éxito";
+            }
+            else
+            {
+                lblMensaje.Text = "Ingrese una ID válida";
+            }
         }
     }
 }

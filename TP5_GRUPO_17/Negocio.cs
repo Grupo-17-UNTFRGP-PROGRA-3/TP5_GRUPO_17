@@ -47,5 +47,10 @@ namespace TP5_GRUPO_17
 
             return conexion.EjecutarConsulta(consultaSQL);
         }
+        public int EliminarSucursal(string idSucursal)
+        {
+            string consultaSQL = "DELETE FROM Sucursal WHERE Id_Sucursal = '" + idSucursal + "'";
+            return conexion.EjecutarConsulta(consultaSQL);
+        }
     }
 }
