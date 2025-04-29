@@ -11,7 +11,12 @@ namespace TP5_GRUPO_17
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+        }
 
-		}
-	}
+        protected void btnEliminarSucursal_Click(object sender, EventArgs e)
+        {
+			lblMensaje.Text = "*mensaje*";
+        }
+    }
 }
