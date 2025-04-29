@@ -9,7 +9,8 @@ namespace TP5_GRUPO_17
 {
 	public class AccesoDatos
 	{
-		private const string cadenaConexion = @"Data Source=DESKTOP-7N6K8KD\SQLEXPRESS;Initial Catalog=BDSucursales;Integrated Security=True;Encrypt=False";
+		//private const string cadenaConexion = @"Data Source=DESKTOP-7N6K8KD\SQLEXPRESS;Initial Catalog=BDSucursales;Integrated Security=True;Encrypt=False";
+		private const string cadenaConexion = @"Data Source= localhost\sqlexpress; Initial Catalog=BDSucursales;Integrated Security=True;Encrypt=False";
         public DataTable ObtenerTablas(string consultaSQL, string nombreTabla)
         {
             SqlConnection conexion = new SqlConnection(cadenaConexion);

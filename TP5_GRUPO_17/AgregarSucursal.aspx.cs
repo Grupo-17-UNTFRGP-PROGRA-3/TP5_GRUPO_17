@@ -12,7 +12,9 @@ namespace TP5_GRUPO_17
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			if (!IsPostBack)
+			ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+
+            if (!IsPostBack)
 			{
 				Negocio negocio = new Negocio();
 				DataTable provincias = new DataTable();
