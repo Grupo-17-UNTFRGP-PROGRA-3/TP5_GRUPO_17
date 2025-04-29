@@ -11,7 +11,6 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 220px;
         }
         .auto-style3 {
             width: 203px;
@@ -73,8 +72,8 @@
                     <td class="auto-style5">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">
-                        <asp:GridView ID="GridView1" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
+                    <td class="auto-style2" colspan="5">
+                        <asp:GridView ID="gvSucursales" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
                             <FooterStyle BackColor="#CCCCCC" />
                             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                             <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
@@ -86,15 +85,15 @@
                             <SortedDescendingHeaderStyle BackColor="#383838" />
                         </asp:GridView>
                     </td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style5">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" colspan="10">
+                        &nbsp;</td>
                 </tr>
             </table>
         </div>

@@ -20,11 +20,11 @@ namespace TP5_GRUPO_17
             SqlDataAdapter dataAdapter = new SqlDataAdapter(consultaSQL, conexion);
             DataSet dataSet = new DataSet();
 
-            dataAdapter.Fill(dataSet, "nombreTabla");
+            dataAdapter.Fill(dataSet, nombreTabla);
 
             conexion.Close();
 
-            return dataSet.Tables["nombreTabla"];
+            return dataSet.Tables[nombreTabla];
         }
         public int ejecutarConsulta(string consultaSQL)
 		{
