@@ -17,6 +17,22 @@ namespace TP5_GRUPO_17
 
             return conexion.ObtenerTablas(consultaSQL, nombreTabla);
         }
+        public DataTable ObtenerHorarios(string IdSucursal = "All")
+        {
+            if (IdSucursal == "All")
+            {
+                string consultaSQL = "SELECT * FROM Horario";
+                string nombreTabla = "Horarios";
+                return conexion.ObtenerTablas(consultaSQL, nombreTabla);
+            }
+            else
+            {
+                string consultaSQL = "SELECT DescripcionHorario FROM Horario WHERE Id_Horario = " +
+                    "(Select Id_HorarioSucursal from Sucursal where Id_Sucursal = " + IdSucursal + ")";
+                string nombreTabla = "Horarios";
+                return conexion.ObtenerTablas(consultaSQL, nombreTabla);
+            }
+        }
         public DataTable ObtenerSucursales()
         {
             string consultaSQL = "SELECT S.Id_Sucursal, S.NombreSucursal AS Nombre, S.DescripcionSucursal AS Descripción," +
@@ -44,6 +60,18 @@ namespace TP5_GRUPO_17
                                      descripcion + "', '" +
                                      idProvincia + "', '" +
                                      direccion + "')";
+
+            return conexion.EjecutarConsulta(consultaSQL);
+        }
+        public int AgregarSucursal(string nombre, string descripcion, string idProvincia, string direccion, string idHorario)
+        {
+            string consultaSQL = "INSERT INTO Sucursal (NombreSucursal, DescripcionSucursal, Id_ProvinciaSucursal, DireccionSucursal," +
+                " Id_HorarioSucursal ) VALUES('" +
+                                     nombre + "', '" +
+                                     descripcion + "', '" +
+                                     idProvincia + "', '" +
+                                     direccion + "', '" +
+                                     idHorario + "')";
 
             return conexion.EjecutarConsulta(consultaSQL);
         }

@@ -10,20 +10,26 @@
         .auto-style1 {
             width: 100%;
         }
-        .auto-style2 {
-        }
         .auto-style3 {
             width: 203px;
         }
         .auto-style4 {
-            width: 88px;
         }
-        .auto-style5 {
-            width: 178px;
+        .auto-style6 {
+            width: 204px;
+        }
+        .auto-style7 {
+            width: 170px;
+        }
+        .auto-style8 {
+            width: 73px;
+        }
+        .auto-style9 {
+            width: 18px;
         }
     </style>
 </head>
-<body style="height: 402px">
+<body style="height: 559px">
     <form id="form1" runat="server">
         <div>
     <nav>
@@ -42,37 +48,35 @@
         </table>
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style2">Búsqueda ingrese Id Sucursal</td>
+                    <td class="auto-style6">Búsqueda ingrese Id Sucursal</td>
                     <td class="auto-style3">
-                        <asp:TextBox ID="txtIdSucursal" runat="server" Width="185px"></asp:TextBox>
+                        <asp:TextBox ID="txtIdSucursal" runat="server" Width="185px" style="margin-left: 12px" ValidationGroup="G2" TextMode="Number"></asp:TextBox>
                     </td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4">
-                        <asp:Button ID="btnFiltrar" runat="server" Text="Filtrar" OnClick="btnFiltrar_Click" />
+                    <td class="auto-style9">&nbsp;</td>
+                    <td class="auto-style8">
+                        <asp:Button ID="btnFiltrar" runat="server" Text="Filtrar" OnClick="btnFiltrar_Click" ValidationGroup="G2" Width="49px" />
                     </td>
-                    <td class="auto-style4">
+                    <td class="auto-style7">
                         <asp:Button ID="btnMostrarTodos" runat="server" Text="Mostrar todos" OnClick="btnMostrarTodos_Click" />
                     </td>
                     <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style6">Horario de la sucursal:</td>
+                    <td class="auto-style3">
+                        <asp:Label ID="lblHorario" runat="server"></asp:Label>
+                    </td>
+                    <td class="auto-style9">&nbsp;</td>
+                    <td class="auto-style8">
+                        &nbsp;</td>
+                    <td class="auto-style7">
+                        <asp:RequiredFieldValidator ID="rfvIdSucursal" runat="server" ControlToValidate="txtIdSucursal" ErrorMessage="Debe ingresar un Id de sucursal para filtrar" ValidationGroup="G2"></asp:RequiredFieldValidator>
+                    </td>
                     <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
                 </tr>
-                <tr>
-                    <td class="auto-style2" colspan="5">
+                </table>
+            <div>
+
                         <asp:GridView ID="gvSucursales" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
                             <FooterStyle BackColor="#CCCCCC" />
                             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -84,18 +88,8 @@
                             <SortedDescendingCellStyle BackColor="#CAC9C9" />
                             <SortedDescendingHeaderStyle BackColor="#383838" />
                         </asp:GridView>
-                    </td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2" colspan="10">
-                        &nbsp;</td>
-                </tr>
-            </table>
+
+            </div>
         </div>
 
     </form>

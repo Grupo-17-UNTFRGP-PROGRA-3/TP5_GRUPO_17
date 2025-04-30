@@ -136,8 +136,11 @@
             </tr>
             <tr>
                 <td class="auto-style10">&nbsp;</td>
-                <td class="auto-style2">&nbsp;</td>
-                <td class="auto-style7">&nbsp;</td>
+                <td class="auto-style2">Horario:</td>
+                <td class="auto-style7">
+                    <asp:DropDownList ID="ddlHorarios" runat="server">
+                    </asp:DropDownList>
+                </td>
                 <td class="auto-style13">&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>

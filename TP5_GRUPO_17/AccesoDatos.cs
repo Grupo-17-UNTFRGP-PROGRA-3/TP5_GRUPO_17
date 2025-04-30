@@ -27,15 +27,15 @@ namespace TP5_GRUPO_17
             return dataSet.Tables[nombreTabla];
         }
         public int EjecutarConsulta(string consultaSQL)
-		{
-			conexion.Open();
+        {
+            conexion.Open();
 
-			SqlCommand sqlCommand = new SqlCommand(consultaSQL, conexion);
-			int filasAfectadas = sqlCommand.ExecuteNonQuery();
+            SqlCommand sqlCommand = new SqlCommand(consultaSQL, conexion);
+            int filasAfectadas = sqlCommand.ExecuteNonQuery();
 
-			conexion.Close();
-			
-			return filasAfectadas;
-		}
+            conexion.Close();
+
+            return filasAfectadas;
+        }
     }
 }
