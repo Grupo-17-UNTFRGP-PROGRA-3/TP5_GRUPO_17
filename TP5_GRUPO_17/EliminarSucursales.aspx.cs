@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,6 +13,14 @@ namespace TP5_GRUPO_17
 		protected void Page_Load(object sender, EventArgs e)
 		{
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+            if (!IsPostBack)
+            {
+                Negocio negocio = new Negocio();
+                DataTable sucursales = new DataTable();
+                sucursales = negocio.ObtenerSucursales();
+                gvSucursales.DataSource = sucursales;
+                gvSucursales.DataBind();
+            }
         }
 
         protected void btnEliminarSucursal_Click(object sender, EventArgs e)
@@ -21,6 +30,12 @@ namespace TP5_GRUPO_17
             if (negocio.EliminarSucursal(txtSucursalAEliminar.Text) == 1)
             {
                 lblMensaje.Text = "La sucursal se ha eliminado con éxito";
+
+                
+                DataTable sucursales = new DataTable();
+                sucursales = negocio.ObtenerSucursales();
+                gvSucursales.DataSource = sucursales;
+                gvSucursales.DataBind();
             }
             else
             {
