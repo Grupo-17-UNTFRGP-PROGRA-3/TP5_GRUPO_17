@@ -35,6 +35,19 @@ namespace TP5_GRUPO_17
 
             gvSucursales.DataSource = sucursales;
             gvSucursales.DataBind();
+            txtIdSucursal.Text=string.Empty;
+        }
+
+        protected void btnMostrarTodos_Click(object sender, EventArgs e)
+        {
+            Negocio negocio = new Negocio();
+            DataTable sucursales = new DataTable();
+
+            sucursales = negocio.ObtenerSucursales();
+
+            gvSucursales.DataSource = sucursales;
+            gvSucursales.DataBind();
+            txtIdSucursal.Text = string.Empty;
         }
     }
 }

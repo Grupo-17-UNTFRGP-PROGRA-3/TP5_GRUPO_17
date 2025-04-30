@@ -51,7 +51,7 @@
                         <asp:Button ID="btnFiltrar" runat="server" Text="Filtrar" OnClick="btnFiltrar_Click" />
                     </td>
                     <td class="auto-style4">
-                        <asp:Button ID="btnMostrarTodos" runat="server" Text="Mostrar todos" />
+                        <asp:Button ID="btnMostrarTodos" runat="server" Text="Mostrar todos" OnClick="btnMostrarTodos_Click" />
                     </td>
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style4">&nbsp;</td>
