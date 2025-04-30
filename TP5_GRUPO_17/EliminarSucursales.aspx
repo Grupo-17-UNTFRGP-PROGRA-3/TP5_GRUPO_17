@@ -40,7 +40,7 @@
                         <asp:Label ID="lblSucursalAEliminar" runat="server" Text="Ingresar ID sucursal:"></asp:Label>
                     </td>
                     <td class="auto-style13">
-            <asp:TextBox ID="txtSucursalAEliminar" runat="server" Width="240px"></asp:TextBox>
+            <asp:TextBox ID="txtSucursalAEliminar" runat="server" Width="240px" AutoPostBack="True" OnTextChanged="txtSucursalAEliminar_TextChanged"></asp:TextBox>
                     </td>
                     <td class="auto-style13">
                         <asp:Button ID="btnEliminarSucursal" runat="server" OnClick="btnEliminarSucursal_Click" Text="Eliminar" />

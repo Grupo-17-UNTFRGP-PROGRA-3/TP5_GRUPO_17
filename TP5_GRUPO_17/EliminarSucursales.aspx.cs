@@ -31,7 +31,6 @@ namespace TP5_GRUPO_17
             {
                 lblMensaje.Text = "La sucursal se ha eliminado con éxito";
 
-                
                 DataTable sucursales = new DataTable();
                 sucursales = negocio.ObtenerSucursales();
                 gvSucursales.DataSource = sucursales;
@@ -40,6 +39,35 @@ namespace TP5_GRUPO_17
             else
             {
                 lblMensaje.Text = "Ingrese una ID válida";
+            }
+        }
+
+        protected void txtSucursalAEliminar_TextChanged(object sender, EventArgs e)
+        {
+            Negocio negocio = new Negocio();
+            DataTable sucursales = new DataTable();
+            if (txtSucursalAEliminar.Text != "")
+            {
+                string filtro = " WHERE S.Id_Sucursal = " + txtSucursalAEliminar.Text;
+                sucursales = negocio.ObtenerSucursales(filtro);
+
+                gvSucursales.DataSource = sucursales;
+                gvSucursales.DataBind();
+                if (gvSucursales.Rows.Count == 1)
+                {
+                    lblMensaje.Text = "Aqui se visualiza el registro a eliminar";
+                }
+                else
+                {
+                    lblMensaje.Text = "No hay registros con ese ID";
+                }
+            }
+            else
+            {
+                sucursales = negocio.ObtenerSucursales();
+                gvSucursales.DataSource = sucursales;
+                gvSucursales.DataBind();
+                lblMensaje.Text = string.Empty;
             }
         }
     }
