@@ -40,6 +40,8 @@ namespace TP5_GRUPO_17
             {
                 lblMensaje.Text = "Ingrese una ID válida";
             }
+
+            txtSucursalAEliminar.Text = string.Empty;
         }
 
         protected void txtSucursalAEliminar_TextChanged(object sender, EventArgs e)
